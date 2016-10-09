@@ -1,0 +1,40 @@
+<!--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 2015/8/25
+  Time: 14:18
+  To change this template use File | Settings | File Templates.
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>地震智能决策系统</title>
+    <link rel="stylesheet" href="login.css" type="text/css"/>
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<div class="login-bg">
+    <div class="login-wrap">
+        <div class="login-panel">
+            <span class="login-title">江苏省地震局</span>
+            <span class="login-title">地震智能决策系统</span>
+            </div>
+        <div class="login-form">
+            <div class="line">
+                <div class="line-x"></div>
+                <span>系统登录</span>
+            </div>
+            <form id="login-form" method="post">
+                <div id="login-state" class="login-state"></div>
+                <input type="text" class="login-name" id="login-name" placeholder="输入账号" name="username">
+                <input type="password" class="login-pwd" id="login-password" placeholder="输入密码" name="password">
+                <input type="button" id="submit-button" class="login-submit" value="登 录">
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jsp/login.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+</body>
+</html>

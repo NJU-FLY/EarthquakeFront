@@ -1,0 +1,21 @@
+
+<ul class="nav nav-left">
+    <li ng-repeat="item in leftList"><a href="#">{{item}}</a></li>
+</ul>
+<!-- 列表页-->
+
+<div class="content-list">
+    <div class="item-list" id="item-list">
+        <div class="content-item" ng-repeat="item in contentList" id="{{item.id}}">
+            <div class="parting-line"></div>
+            <div class="item-title"><a href="#/contentDetail">{{item.title}}</a></div>
+            <div class="item-info">{{item.info}}</div>
+            <div class="item-abstract">{{item.abstract}}</div>
+        </div>
+    </div>
+    <div class="load-more">
+        <div class="load-more-content" ng-click="loadMore($event)">
+            加载更多
+        </div>
+    </div>
+</div>

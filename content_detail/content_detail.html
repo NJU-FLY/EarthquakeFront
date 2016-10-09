@@ -1,0 +1,18 @@
+<ul class="nav nav-left">
+    <li ng-repeat="item in leftList"><a href="#">{{item}}</a></li>
+</ul>
+<!-- 详情页-->
+<div class="content-detail">
+    <!--<ul class="detail-nav breadcrumb">-->
+        <!--<li>新闻</li>-->
+        <!--<li>危险驾驶案</li>-->
+    <!--</ul>-->
+    <div class="detail-header" >
+        <div class="detail-title">{{detail.title}}</div>
+        <div class="detail-info">{{detail.info}}</div>
+    </div>
+    <div class="detail-detail-header">
+        <span>消息正文</span>
+    </div>
+    <div class="detail-detail">{{detail.content}}</div>
+</div>

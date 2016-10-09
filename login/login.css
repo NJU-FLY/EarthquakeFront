@@ -1,0 +1,377 @@
+@charset "utf-8";
+/*
+    登录界面css
+*/
+
+body {
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+}
+
+input {
+    font-family: "Microsoft YaHei";
+}
+
+.login-bg {
+    position : absolute;
+    width: 100%;
+    height: 100%;
+    background: url(background.png) no-repeat 0;
+    background-size: cover;
+    font-family: "Microsoft YaHei";
+}
+
+.login-wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    height: 350px;
+    margin-left: -450px;
+    margin-top: -175px;
+}
+
+.login-panel {
+    position: relative;
+    width: 400px;
+    top: 25%;
+    margin-right: 50px;
+    float: left;
+}
+
+.login-title {
+    margin-bottom: 50px;
+    display: block;
+    position: relative;
+    font-size: 50px;
+    color: #62b8e9;
+}
+
+.login-form {
+    position: relative;
+    float: left;
+    width: 424px;
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.line {
+    padding-top: 64px;
+    text-align: center;
+}
+
+.line-x {
+    width: 334px;
+    height: 1px;
+    border-top: 1px solid #d2d2d2;
+    margin: 0 auto;
+}
+
+.login-state {
+    margin-right: 10px;
+    text-align: center
+}
+
+.line span {
+    color: #62b8e9;
+    font-size: 28px;
+    letter-spacing: 5px;
+    line-height: 27px;
+    background: #fff;
+    width: 188px;
+    height: 27px;
+    display: inline-block;
+    margin-top: -14px;
+}
+
+.login-bg form {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.login-form .login-name {
+    padding-left: 56px;
+    width: 334px;
+    height: 44px;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    margin-left: 45px;
+    margin-bottom: 36px;
+    font-size: 18px;
+    background: url(../img/login_icon_person.png) no-repeat 20px 13px;
+}
+
+.login-form .login-pwd {
+    padding-left: 56px;
+    width: 334px;
+    height: 44px;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    margin-left: 45px;
+    margin-bottom: 36px;
+    font-size: 18px;
+    background: url(../img/login_icon_lock.png) no-repeat 20px 10px;
+}
+
+.login-form .login-submit {
+    width: 334px;
+    height: 58px;
+    background: #62b8e9;
+    color: #FFF;
+    font-size: 28px;
+    margin-left: 45px;
+    border-radius: 3px;
+    border: 0 none;
+
+}
+
+.login-submit:hover {
+    background: #62b8e9;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.login-submit:active {
+    background: rgb(68,139,185);
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #c1c0c1;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #c1c0c1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #c1c0c1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #c1c0c1;
+}
+
+@-webkit-keyframes webkit-buzz-out {
+    0% {
+        -webkit-transform: translateX(15px);
+    }
+    100% {
+        -webkit-transform: translateX(-15px);
+    }
+}
+
+@keyframes buzz-out {
+    0% {
+        -moz-transform: translateX(15px);
+    }
+    100% {
+        -moz-transform: translateX(-15px);
+    }
+}
+
+.webkit-buzz-out {
+    -webkit-animation-name: webkit-buzz-out;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 0.2s;
+    -webkit-animation-fill-mode: none;
+    -webkit-animation-iteration-count: 3
+}
+
+.buzz-out {
+    animation-name: buzz-out;
+    animation-duration: 0.1s;
+    animation-timing-function: ease;
+    animation-delay: 0.2s;
+    animation-fill-mode: none;
+    animation-iteration-count: 3
+}
+
+@media (max-width: 768px) {
+
+    /*h1 {*/
+        /*position: relative;*/
+        /*left: 5.5rem;*/
+        /*top: 1em;*/
+        /*color: #337ab7;*/
+        /*font-size: 20px;*/
+        /*display: inline-block;*/
+    /*}*/
+
+    /*.login-Mongolia, .login-form {*/
+        /*position: static;*/
+        /*top: 0;*/
+        /*text-align: center;*/
+    /*}*/
+
+    /*.login-Mongolia {*/
+        /*background: none;*/
+        /*height: auto;*/
+    /*}*/
+
+    /*.login-Mongolia .login-panel {*/
+        /*position: static;*/
+        /*left: 0;*/
+    /*}*/
+
+    /*.login-panel .login-logo {*/
+        /*background-position: center;*/
+    /*}*/
+
+    /*.login-panel .login-title {*/
+        /*font-size: 28px;*/
+    /*}*/
+
+    /*.login-panel .login-title span {*/
+        /*display: block;*/
+        /*font-size: 22px;*/
+    /*}*/
+
+    /*.tx-login {*/
+        /*position: absolute;*/
+        /*top: -64px;*/
+        /*left: 350px;*/
+    /*}*/
+
+    /*#login-form {*/
+        /*width: 90%;*/
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+    /*}*/
+
+    /*.login-form {*/
+        /*width: 90%;*/
+        /*margin: 30px auto;*/
+        /*right: 2rem;*/
+        /*height: auto;*/
+        /*border: 1px solid #d2d2d2;*/
+        /*background: #fff;*/
+        /*border-radius: 5px;*/
+    /*}*/
+
+    /*.login-form .login-name, .login-form .login-pwd {*/
+        /*width: 100%;*/
+        /*margin-left: 0;*/
+    /*}*/
+
+    /*.line {*/
+        /*padding-top: 50px;*/
+        /*text-align: center;*/
+    /*}*/
+
+    /*.line-x {*/
+        /*width: 16rem;*/
+        /*height: 1px;*/
+        /*border-top: 1px solid #d2d2d2;*/
+        /*margin: 0 auto;*/
+    /*}*/
+
+    /*.login-state {*/
+        /*margin-bottom: 15px;*/
+        /*margin-right: 2.5rem;*/
+        /*margin-top: -15px;*/
+        /*text-align: center*/
+    /*}*/
+
+    /*.line span {*/
+        /*color: #434343;*/
+        /*font-size: 14px;*/
+        /*line-height: 27px;*/
+        /*background: #fff;*/
+        /*width: 129px;*/
+        /*height: 27px;*/
+        /*display: inline-block;*/
+        /*margin-top: -18px;*/
+    /*}*/
+
+    /*.login-bg .login-text {*/
+        /*padding-left: 20px;*/
+        /*background: #f0eef0;*/
+        /*width: 200px;*/
+        /*height: 42px;*/
+        /*border: 1px solid #bfbfbf;*/
+        /*border-radius: 5px;*/
+        /*margin-left: 2.5rem;*/
+        /*margin-bottom: 17px;*/
+        /*font-size: 18px;*/
+    /*}*/
+
+    /*.login-bg .login-text-short {*/
+        /*padding-left: 20px;*/
+        /*background: #f0eef0;*/
+        /*width: 45%;*/
+        /*height: 42px;*/
+        /*border: 1px solid #bfbfbf;*/
+        /*border-radius: 5px;*/
+        /*margin: 0 5% 5px 0;*/
+        /*font-size: 18px;*/
+        /*float: left;*/
+    /*}*/
+
+    /*.login-bg .yzm {*/
+        /*background: #f0eef0;*/
+        /*width: 126px;*/
+        /*height: 38px;*/
+        /*border-radius: 5px;*/
+        /*margin-left: 2.5rem;*/
+        /*border: 1px solid #bfbfbf;*/
+        /*float: left;*/
+        /*font-size: 18px;*/
+        /*padding-left: 20px;*/
+        /*margin-right: 4px;*/
+    /*}*/
+
+    /*.login-bg .yzm-img {*/
+        /*float: left;*/
+        /*border: 1px solid #dcdcdc;*/
+        /*border-radius: 5px;*/
+        /*margin-right: 4px;*/
+    /*}*/
+
+    /*.login-bg .login-submit {*/
+        /*height: 42px;*/
+        /*background: #84a2c8;*/
+        /*color: #FFF;*/
+        /*display: block;*/
+        /*font-size: 15px;*/
+        /*border-radius: 5px;*/
+        /*border: 0 none;*/
+        /*margin: 10px 0;*/
+        /*width: 100%;*/
+    /*}*/
+
+    /*.a-yzm {*/
+        /*line-height: 38px;*/
+        /*text-decoration: underline;*/
+    /*}*/
+
+    /*.login-bg .login-identify {*/
+        /*width: 45%;*/
+        /*height: 42px;*/
+        /*background: #84a2c8;*/
+        /*color: #FFF;*/
+        /*font-size: 15px;*/
+        /*border-radius: 5px;*/
+        /*border: 0 none;*/
+        /*margin: 0 0 5px 5%;*/
+    /*}*/
+
+    /*button:disabled,*/
+    /*button[disabled],*/
+    /*button.disabled, {*/
+        /*background: #fff;*/
+        /*border-color: #ccc;*/
+    /*}*/
+
+    /*.login-bg .login-submit:hover {*/
+        /*cursor: pointer;*/
+    /*}*/
+}
+
+/* login end */
