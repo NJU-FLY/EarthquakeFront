@@ -3,7 +3,22 @@
     <li ng-repeat="item in leftList"><a href="#">{{item}}</a></li>
 </ul>
 <!-- 列表页-->
-
+<div class="searchButton">
+	<form class="bs-example bs-example-form" role="form">
+		<div class="input-group">
+			
+			<input type="text" class="form-control" ng-model="searchItem.title" placeholder="输入文章的标题或副标题查找">
+		</div>
+		<div class="input-group">
+			
+			<input type="text" class="form-control" ng-model="searchItem.content" placeholder="输入文章内容查找">
+			
+		</div>
+		<button type="button" class="btn btn-primary">查找</button>
+		<button type="button" class="btn btn-primary clearInput">清除</button>
+		
+	</form>
+</div>
 <div class="content-list">
     <div class="item-list" id="item-list">
         <div class="content-item" ng-repeat="item in contentList" id="{{item.id}}">

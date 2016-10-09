@@ -40,7 +40,7 @@ body{
 
 /* 内容列表样式 */
 .content-list {
-    margin-top: 60px;
+    margin-top: 30px;
     margin-left: 250px;
     padding: 20px 20px 20px 40px;
 }
@@ -143,3 +143,27 @@ body{
     line-height: 1.8;
 }
 /*检索栏*/
+.searchButton{
+	margin-top: 60px;
+	margin-left: 280px;
+	border: 1px solid #2e6889;
+	padding: 20px;
+	padding-left: 200px;
+	border-radius:10px ;
+}
+.input-group{
+	width: 600px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+.btn{
+	margin-left: 200px;
+	width: 60px;
+}
+.clearInput{
+	margin-left: 40px;
+}
+
+.input-group .form-control{
+	border-radius: 20px;
+}

@@ -5,6 +5,7 @@
 //列表页面模块
 var listApp = angular.module('listApp', ['httpService']).
     controller('ListController', function ($scope, $compile, $templateCache, httpService) {
+        $scope.searchItem = {title,content,classes};
         //列表项数据拼接
         $scope.appendItemContent = function (data) {
             $scope.contentList = $scope.contentList || [];
@@ -12,6 +13,7 @@ var listApp = angular.module('listApp', ['httpService']).
                 $scope.contentList.push(data.list[i]);
             }
         };
+        
         //侧边栏加载
         httpService.loadLeftNav().
             success(function (data) {
