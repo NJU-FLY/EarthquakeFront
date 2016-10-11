@@ -7,15 +7,15 @@
 	<form class="bs-example bs-example-form" role="form">
 		<div class="input-group">
 			
-			<input type="text" class="form-control" ng-model="searchItem.title" placeholder="输入文章的标题或副标题查找">
+			<input type="text" class="form-control" ng-model="title" placeholder="输入文章的标题或副标题查找">
 		</div>
 		<div class="input-group">
 			
-			<input type="text" class="form-control" ng-model="searchItem.content" placeholder="输入文章内容查找">
+			<input type="text" class="form-control" ng-model="content" placeholder="输入文章内容查找">
 			
 		</div>
-		<button type="button" class="btn btn-primary">查找</button>
-		<button type="button" class="btn btn-primary clearInput">清除</button>
+		<button type="button" class="btn btn-primary" ng-click="findContent($event)">查找</button>
+		<button type="button" class="btn btn-primary clearInput" ng-click="clearContent()">清除</button>
 		
 	</form>
 </div>
@@ -23,7 +23,7 @@
     <div class="item-list" id="item-list">
         <div class="content-item" ng-repeat="item in contentList" id="{{item.id}}">
             <div class="parting-line"></div>
-            <div class="item-title"><a href="#/contentDetail">{{item.title}}</a></div>
+            <div class="item-title"><a href="#/contentDetail" ng-model="detailTitle">{{item.title}}</a></div>
             <div class="item-info">{{item.info}}</div>
             <div class="item-abstract">{{item.abstract}}</div>
         </div>

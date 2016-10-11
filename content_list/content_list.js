@@ -2,10 +2,12 @@
  * Created by FLY on 2016/2/8 0008.
  */
 
+
 //列表页面模块
 var listApp = angular.module('listApp', ['httpService']).
     controller('ListController', function ($scope, $compile, $templateCache, httpService) {
-        $scope.searchItem = {title,content,classes};
+       
+        
         //列表项数据拼接
         $scope.appendItemContent = function (data) {
             $scope.contentList = $scope.contentList || [];
@@ -21,10 +23,18 @@ var listApp = angular.module('listApp', ['httpService']).
             });
 
         //列表页面加载
-        httpService.loadList().
+        $scope.findContent=function(){
+        	httpService.loadList().
             success(function (data) {
                 $scope.appendItemContent(data);
             });
+        }
+        //清除
+        $scope.clearContent=function(){
+        	$scope.title='';
+        	$scope.content='';
+        }
+        
 
         //加载更多
         $scope.loadMore = function () {

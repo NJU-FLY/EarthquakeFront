@@ -8,13 +8,20 @@ var httpService = angular.module('httpService', []).
         var loadLeftNav = function () {
             return $http({
                 method: 'get',
-                url: 'index.json'
+//              url: '/getNav'
+				url:'index.json'
+               
             });
         };
         var loadList = function () {
             return $http({
                 method: 'get',
-                url: 'list.json'
+//              url: '/getContentList',
+				url:'list.json'
+//            	params:{
+//             	title:$scope.title,
+//             	content:$scope.content
+//             }
             });
         };
 
@@ -22,6 +29,10 @@ var httpService = angular.module('httpService', []).
             return $http({
                 method: 'get',
                 url: 'detail.json'
+//             	params:{
+//             	title:$scope.detailTitle
+//             	
+//             }
             });
         };
         return {
