@@ -8,7 +8,8 @@ var httpService = angular.module('httpService', []).
         var loadLeftNav = function () {
             return $http({
                 method: 'get',
-//              url: '/getNav'
+//              url: '/index',
+//				params:
 				url:'index.json'
                
             });
@@ -16,7 +17,7 @@ var httpService = angular.module('httpService', []).
         var loadList = function () {
             return $http({
                 method: 'get',
-//              url: '/getContentList',
+//              url: '/contentList',
 				url:'list.json'
 //            	params:{
 //             	title:$scope.title,
@@ -28,6 +29,7 @@ var httpService = angular.module('httpService', []).
         var loadDetail = function () {
             return $http({
                 method: 'get',
+//              url:'/contentDetail',
                 url: 'detail.json'
 //             	params:{
 //             	title:$scope.detailTitle

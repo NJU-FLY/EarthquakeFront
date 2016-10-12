@@ -11,7 +11,7 @@ var detailApp = angular.module('detailApp', ['httpService']).
                 $scope.leftList = data.item;
             });
         //详情加载
-        $scope.
+ 
         httpService.loadDetail().
             success(function (data) {
                 $scope.detail = data.detail;
