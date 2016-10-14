@@ -1,0 +1,24 @@
+<!-- 爬虫配置页面-->
+	<div class="craw-config">
+		<h3>爬虫配置</h3>
+	<form class="bs-example bs-example-form" role="form">
+		<div class="input-group" class="url1">
+			<h5>需要爬取的URL(必填，若有多个请以空格间隔)：</h5>
+			<textarea type="text" class="form-control" ng-model="urls" required>
+			</textarea>
+		</div>
+		<div class="input-group">
+			<h5>需要爬取的时间(必填，按照yyyy-mm-dd或时间序列的格式)：</h5>
+			<input type="datetime" class="form-control" ng-model="time" required>
+			
+		</div>
+		<div class="input-group">
+			<h5>需要爬取的关键字：</h5>
+			<input type="text" class="form-control" ng-model="keyWord">
+			
+		</div>
+		
+		<button type="submit" class="btn btn-primary" ng-click="CrawlStart($event)">运行爬虫</button>
+		<button type="reset" class="btn btn-primary clearInput" ng-click="CrawlStop($event)">停止爬虫</button>
+	</form>
+</div>
