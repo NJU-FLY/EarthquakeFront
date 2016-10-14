@@ -1,36 +1,68 @@
-
+<div ng-app="listApp" ng-controller="ListController">
 <ul class="nav nav-left">
-    <li ng-repeat="item in leftList"><a href="#">{{item}}</a></li>
+    <li ng-repeat="item in leftList"><a href="#/search?type={{item}}">{{item}}</a></li>
 </ul>
 <!-- 列表页-->
 <div class="searchButton">
 	<form class="bs-example bs-example-form" role="form">
 		<div class="input-group">
 			
-			<input type="text" class="form-control" ng-model="title" placeholder="输入文章的标题或副标题查找">
+			<input type="text" class="form-control" id="title" ng-model="title" placeholder="输入文章的标题或副标题查找">
 		</div>
 		<div class="input-group">
 			
-			<input type="text" class="form-control" ng-model="content" placeholder="输入文章内容查找">
+			<input type="text" class="form-control" id="content" ng-model="content" placeholder="输入文章内容查找">
 			
 		</div>
-		<button type="button" class="btn btn-primary" ng-click="findContent($event)">查找</button>
-		<button type="button" class="btn btn-primary clearInput" ng-click="clearContent()">清除</button>
+		<button type="submit" class="btn btn-primary" ng-click="findContent()">查找</button>
+		<button type="reset" class="btn btn-primary clearInput">清除</button>
 		
 	</form>
 </div>
 <div class="content-list">
     <div class="item-list" id="item-list">
-        <div class="content-item" ng-repeat="item in contentList" id="{{item.id}}">
+    <div class="sort">
+    	<a href="#/search?timeSort=1">按时间升序</a><a href="#/search?timeSort=2">按时间降序</a><a href="#/search?eventSort=1">按事件降序</a><a href="#/search?eventSort=2">按事件降序</a>
+    </div>	
+    <table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>地震事件</th>
+			<th>序号</th>
+			<th>发布时间</th>
+			<th>关键词</th>
+			<th>信息来源</th>
+			<th>标题</th>
+			<th>摘要</th>
+			<th>网址</th>
+			<th>收集时间</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in contentList" id="{{item.id}}">
+			<td><a href="#/contentdetail?id={{item.id}}">{{item.eventid}}</a></td>
+			<td>{{item.eventseq}}</td>
+			<td>{{item.publishedtime}}</td>
+			<td>{{item.keyword}}</td>
+			<td>{{item.source}}</td>
+			<td>{{item.title}}</td>
+			<td class="item-abstract">{{item.summary}}</td>
+			<td>{{item.url}}</td>
+			<td>{{item.crawledtime}}</td>
+		</tr>
+	</tbody>
+</table>
+        <!--<div class="content-item" ng-repeat="item in contentList" id="{{item.id}}">
             <div class="parting-line"></div>
             <div class="item-title"><a href="#/contentDetail" ng-model="detailTitle">{{item.title}}</a></div>
             <div class="item-info">{{item.info}}</div>
             <div class="item-abstract">{{item.abstract}}</div>
-        </div>
+        </div>-->
     </div>
     <!--<div class="load-more">
         <div class="load-more-content" ng-click="loadMore($event)">
             加载更多
         </div>
     </div>-->
+</div>
 </div>

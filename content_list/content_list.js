@@ -6,9 +6,7 @@
 //列表页面模块
 var listApp = angular.module('listApp', ['httpService']).
     controller('ListController', function ($scope, $compile, $templateCache, httpService) {
-       
-        var title=$scope.title;
-        var content=$scope.content;
+     
         //列表项数据拼接
         $scope.appendItemContent = function (data) {
             $scope.contentList = $scope.contentList || [];
@@ -25,28 +23,17 @@ var listApp = angular.module('listApp', ['httpService']).
 
         //列表页面加载
         $scope.findContent=function(){
-        	if(title==''&&title==null&&content==''&&content.null){
-        		alert("检索字段不能为空！");
-        	}else{
+        	
+        	$scope.clearResult();
         	httpService.loadList().
             success(function (data) {
                 $scope.appendItemContent(data);
             });
-            }
-        }
-        //清除输入
-        $scope.clearContent=function(){
-        	$scope.title='';
-        	$scope.content='';
-        }
-        
 
-        //加载更多
-        $scope.loadMore = function () {
-            httpService.loadList().
-                success(function (data) {
-                    $scope.appendItemContent(data);
-                });
         }
-
+        //清除检索结果，重新检索
+        $scope.clearResult=function(){
+        	$scope.contentList=[];
+        }
+		
     });

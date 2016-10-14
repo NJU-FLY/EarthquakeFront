@@ -7,15 +7,19 @@ var mainApp = angular.module('mainApp', ['ngRoute', 'listApp', 'detailApp','http
 
 mainApp.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
-            when('/contentList', {
+            when('/search', {
                 templateUrl: 'content_list/content_list.html',
                 controller: 'ListController'
             }).
-            when('/contentDetail', {
+            when('/contentdetail', {
                 templateUrl: 'content_detail/content_detail.html',
                 controller: 'DetailController'
             }).
-            otherwise({redirectTo: '/contentList'});
+            when('/crawler',{
+            	templateUrl:'crowlConfig/crawl_configuration.html',
+            	controller:'crawlController'
+            }).
+            otherwise({redirectTo: '/crawler'});
     }]);
 
 

@@ -19,7 +19,21 @@ body{
     cursor: pointer;
     color: #ffb73d;
 }
-
+.navbar-header{
+	width: 100%;
+	padding-right: 20px;
+}
+.navbar-header .a1,.navbar-header .a2{
+	color: white;
+	float: right;
+	display: inline-block;
+	margin-top: 15px;
+	width: 90px;
+	margin-right: 20px;
+}
+.navbar-header .a2{
+	border-right: 1px solid white;
+}
 /* 页面主体样式 */
 .main-content{
     width: 1227px;
@@ -30,19 +44,24 @@ body{
 .nav-left{
     position: fixed;
     margin-top: 30px;
-    width: 240px;
+    width: 120px;
 }
 
 .nav-left li{
     border-bottom: 1px dotted rgb(50,58,69);
-    font-size: 20px;
+    font-size: 15px;
+}
+.nav-left li a{
+	padding:10px;
+	text-align: center;
+	
 }
 
 /* 内容列表样式 */
 .content-list {
     margin-top: 30px;
-    margin-left: 250px;
-    padding: 20px 20px 20px 40px;
+    margin-left: 180px;
+    padding: 20px 0px 20px 0px;
 }
 
 .content-item{
@@ -55,24 +74,32 @@ body{
 }
 
 .item-title {
-    font-size: 20px;
-    font-weight: 800;
+    font-weight:800;
     color: #447e9f;
     padding: 10px;
     cursor: pointer;
+    /*width: 8%;*/
 }
 
 .item-info {
-    font-size: 16px;
     color: #447e9f;
     padding: 10px;
+    /*width: 15%;*/
 }
-
+.item-abstract{
+/*	width: 50%;*/
+}
 .item-abstract {
     padding: 10px;
     cursor: pointer;
 }
-
+thead th{
+	text-align: center;
+}
+.sort a{
+	float: right;
+	margin-left: 10px;
+}
 .load-more{
     float: right;
     width: 100%;
@@ -94,7 +121,7 @@ body{
 /* 内容详情样式 */
 .content-detail{
     margin-top: 60px;
-    margin-left: 250px;
+    margin-left: 200px;
     padding: 20px 20px 20px 40px;
 }
 
@@ -144,8 +171,8 @@ body{
 }
 /*检索栏*/
 .searchButton{
-	margin-top: 60px;
-	margin-left: 280px;
+	margin-top: 80px;
+	margin-left:180px;
 	border: 1px solid #2e6889;
 	padding: 20px;
 	padding-left: 200px;
@@ -154,7 +181,7 @@ body{
 .input-group{
 	width: 600px;
 	margin-bottom: 10px;
-	border-radius: 15px;
+	/*border-radius: 15px;*/
 }
 .btn{
 	margin-left: 200px;
@@ -166,6 +193,29 @@ body{
 	color: #2e6889;
 }
 
-.input-group .form-control{
-	border-radius: 20px;
+.input-group .form-control:last-child{
+	border-radius: 5px;
+}
+.input-group textarea{
+	height: 150px;
+}
+/*爬虫配置页面*/
+.craw-config{
+	width: 900px;
+	margin: 100px auto;
+}
+.craw-config .input-group{
+	width: 900px;
+}
+.craw-config button{
+	width: 120px;
+	text-align: center;
+	margin-left: 300px;
+}
+.craw-config .clearInput{
+	margin-left: 20px;
+}
+.craw-config a{
+	float: right;
+	margin-top: 20px;
 }
