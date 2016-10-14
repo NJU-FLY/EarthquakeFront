@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import App from './App'
 import ContentList from './components/ContentList'
-import TimeEntries from './components/TimeEntries'
-import LogTime from './components/LogTime'
-import infinite from './components/infinite'
+import ContentDetail from './components/ContentDetail'
+
 
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -13,23 +12,15 @@ Vue.use(VueRouter)
 
 //2.0新特性
 const routes = [{
-  path: '/home',
-  component: Home
+  path: '/contentList',
+  component: ContentList
 },{
-	path:'/time-entries',
-	component:TimeEntries,
-	children:[{
-		path:'log-time',
-		component:LogTime
-	}]
-},
-{
-	path:'/infinite',
-	component:infinite
+	path:'/contentDetail',
+	component:ContentDetail,
 },
 {
   path: '*',
-  redirect: '/home'
+  redirect: '/contentList'
 }]
 const router = new VueRouter({
   routes // （缩写）相当于 routes: routes
