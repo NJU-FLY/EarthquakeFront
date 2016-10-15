@@ -18,7 +18,8 @@ var listApp = angular.module('listApp', ['httpService']).
         //侧边栏加载
         httpService.loadLeftNav().
             success(function (data) {
-                $scope.leftList = data.item;
+             $scope.leftList = data.item;
+//	             $scope.leftList = data;
             });
 
         //列表页面加载
@@ -52,12 +53,5 @@ var listApp = angular.module('listApp', ['httpService']).
         	});
         	
         };
-//      //获得文章id
-//      $scope.getID=function(){
-//      	var id=$(event.target).text();
-//      	console.log(id);
-//      	httpService.convertID(id);
-//      }
-//		
 		
     });

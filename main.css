@@ -43,18 +43,20 @@ body{
 /* 侧边栏样式 */
 .nav-left{
     position: fixed;
-    margin-top: 30px;
+/*    margin-top: 30px;*/
     width: 120px;
+    overflow: auto;
 }
 
 .nav-left li{
     border-bottom: 1px dotted rgb(50,58,69);
     font-size: 15px;
-    padding:10px;
-    text-align: center;
-    cursor: pointer;
+    
 }
-
+.nav-left li a{
+	padding:10px;
+    text-align: center;
+}
 /* 内容列表样式 */
 .content-list {
     margin-top: 30px;
@@ -91,15 +93,21 @@ body{
     padding: 10px;
     cursor: pointer;
 }
-thead th{
+table tr:first-child td{
 	text-align: center;
+	font-size: 15px;
+	color: #337ab7;
+
 }
 .sort a{
 	float: right;
 	margin-left: 10px;
 }
-tr{
-	cursor: pointer;
+tr td:nth-child(2){
+	width: 5%;
+}
+tr td:nth-child(4){
+	width: 10%;
 }
 .load-more{
     float: right;

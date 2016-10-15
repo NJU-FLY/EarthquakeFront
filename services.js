@@ -14,8 +14,8 @@ var httpService = angular.module('httpService',[]).
         	 */
             return $http({
                 method: 'get',
-//              url: '/leftbar'
-				url:'index.json'
+                url: '/leftbar'
+//				url:'index.json'
                
             });
         };
@@ -44,9 +44,9 @@ var httpService = angular.module('httpService',[]).
         	console.log(data);
             return $http({
                 method: 'get',
-//              url: '/search',
-				url:'list.json'
-//            	params:data
+                url: '/search',
+//				url:'list.json'
+              	params:data
             });
         };
 		var loadListByClass=function(type){
@@ -62,9 +62,9 @@ var httpService = angular.module('httpService',[]).
         	console.log(data);
             return $http({
                 method: 'get',
-//              url: '/search',
-				url:'list.json'
-//            	params:data
+                url: '/search',
+//				url:'list.json'
+              	params:data
             });
 		};
 		var loadListByOrder=function(sortClass){
@@ -113,9 +113,9 @@ var httpService = angular.module('httpService',[]).
         	console.log(data);
             return $http({
                 method: 'get',
-//              url: '/search',
-				url:'list.json'
-//            	params:data
+                url: '/search',
+//				url:'list.json'
+              	params:data
             });
 		};
 		
@@ -137,11 +137,11 @@ var httpService = angular.module('httpService',[]).
       		console.log(id);
             return $http({
                 method: 'get',
-//              url:'/contentdetail',
-//				params:{
-//					'id':id
-//				}
-	            url: 'detail.json'
+                url:'/contentdetail',
+				params:{
+					'id':id
+				}
+//	            url: 'detail.json'
             });
         };
         /*
