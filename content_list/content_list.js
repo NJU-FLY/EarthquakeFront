@@ -35,5 +35,29 @@ var listApp = angular.module('listApp', ['httpService']).
         $scope.clearResult=function(){
         	$scope.contentList=[];
         }
+        //分类选取结果
+        $scope.sortResult=function(){
+        	$scope.clearResult();
+        	var typename=$(event.target).text();
+        	httpService.loadListByClass(typename).success(function(data){
+        		$scope.appendItemContent(data);
+        	});
+        }
+      //按时间或事件排序
+        $scope.sortByOrder=function(){
+        	$scope.clearResult();
+        	var sortClass=$(event.target).text();
+        	httpService.loadListByOrder(sortClass).success(function(data){
+        		$scope.appendItemContent(data);
+        	});
+        	
+        };
+//      //获得文章id
+//      $scope.getID=function(){
+//      	var id=$(event.target).text();
+//      	console.log(id);
+//      	httpService.convertID(id);
+//      }
+//		
 		
     });

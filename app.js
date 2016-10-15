@@ -3,7 +3,7 @@
  */
 
 //主模块
-var mainApp = angular.module('mainApp', ['ngRoute', 'listApp', 'detailApp','httpService']);
+var mainApp = angular.module('mainApp', ['ngRoute', 'listApp', 'detailApp','crawlApp','httpService']);
 
 mainApp.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.

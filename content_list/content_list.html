@@ -1,6 +1,6 @@
 <div ng-app="listApp" ng-controller="ListController">
 <ul class="nav nav-left">
-    <li ng-repeat="item in leftList"><a href="#/search?type={{item}}">{{item}}</a></li>
+    <li ng-repeat="item in leftList" ng-click="sortResult(event.target)">{{item}}</li>
 </ul>
 <!-- 列表页-->
 <div class="searchButton">
@@ -22,7 +22,7 @@
 <div class="content-list">
     <div class="item-list" id="item-list">
     <div class="sort">
-    	<a href="#/search?timeSort=1">按时间升序</a><a href="#/search?timeSort=2">按时间降序</a><a href="#/search?eventSort=1">按事件降序</a><a href="#/search?eventSort=2">按事件降序</a>
+    	<a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按时间升序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按时间降序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件升序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件降序</a>
     </div>	
     <table class="table table-bordered">
 	<thead>
@@ -40,7 +40,7 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="item in contentList" id="{{item.id}}">
-			<td><a href="#/contentdetail?id={{item.id}}">{{item.eventid}}</a></td>
+			<td><a href="#/contentdetail?id={{item.id}}" ng-click="getID(event.target)">{{item.eventid}}</a></td>
 			<td>{{item.eventseq}}</td>
 			<td>{{item.publishedtime}}</td>
 			<td>{{item.keyword}}</td>

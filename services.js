@@ -14,7 +14,7 @@ var httpService = angular.module('httpService',[]).
         	 */
             return $http({
                 method: 'get',
-//              url: '/search',
+//              url: '/leftbar'
 				url:'index.json'
                
             });
@@ -29,7 +29,7 @@ var httpService = angular.module('httpService',[]).
         	 * 接口：/search
         	 * 参数：{"title":"","content":"","className":"","timeSort":"","eventSort":""}
         	 * 返回：{"list": [{
-						      "id" :"事件序列",
+						      "eventid" :"事件序列",
 						      "num":"序号",
 						      "atime":"发布时间",
 						      "keyWords":"关键词",
@@ -44,16 +44,88 @@ var httpService = angular.module('httpService',[]).
         	console.log(data);
             return $http({
                 method: 'get',
-                url: '/search',
-//				url:'list.json'
-              	params:data
+//              url: '/search',
+				url:'list.json'
+//            	params:data
             });
         };
-
-        var loadDetail = function () {
+		var loadListByClass=function(type){
+			var data={
+               	'title':$("#title").val(),
+               	'content':$("#content").val(),
+               	'typename':type
+              };
+        	/*
+        	 * 接口：/search
+        	 * 参数：{"title":"","content":"","typename":""}
+        	 */
+        	console.log(data);
+            return $http({
+                method: 'get',
+//              url: '/search',
+				url:'list.json'
+//            	params:data
+            });
+		};
+		var loadListByOrder=function(sortClass){
+			var data={};
+			var title=$("#title").val();
+			var content=$("#content").val();
+			switch(sortClass){
+				case '按时间升序':
+				data={
+               	'title':title,
+               	'content':content,
+               	'orderName':'publishedtime',
+               	'order':'1'
+              		};
+             	 break;case '按时间降序':
+				data={
+               	'title':title,
+               	'content':content,
+               	'orderName':'publishedtime',
+               	'order':'2'
+              		};
+             	 break;
+             	 case '按事件升序':
+				data={
+               	'title':title,
+               	'content':content,
+               	'orderName':'eventid',
+               	'order':'1'
+              		};
+             	 break;
+             	 case '按事件降序':
+				data={
+               	'title':title,
+               	'content':content,
+               	'orderName':'eventid',
+               	'order':'2'
+              		};
+             	 break;
+             	 
+			}
+			
+        	/*
+        	 * 接口：/search
+        	 * 参数：{"title":"","content":"","typename":""}
+        	 */
+        	console.log(data);
+            return $http({
+                method: 'get',
+//              url: '/search',
+				url:'list.json'
+//            	params:data
+            });
+		};
+		
+        var loadDetail = function (id) {
+        	
         	/*
         	 * 接口：/contentdetail
-        	 * 参数：无
+        	 * 参数：{
+        	 * 	'id':id
+        	 * }
         	 * 返回：{"detail":{
 							  "id" : "事件序列",
 							  "title": "标题",
@@ -62,9 +134,13 @@ var httpService = angular.module('httpService',[]).
 							}
 					}
         	 */
+      		console.log(id);
             return $http({
                 method: 'get',
-//              url:'/contentDetail'
+//              url:'/contentdetail',
+//				params:{
+//					'id':id
+//				}
 	            url: 'detail.json'
             });
         };
@@ -72,14 +148,18 @@ var httpService = angular.module('httpService',[]).
          * 爬虫开始接口
          */
         var crawlStart=function(){
-        	var urlArray=$scope.urls.split(" ");
-        	var time=$scope.time;
+        	var urlArray=$("#urls").val().split(" ");
+        	var time=$("#time").val();
+        	var eventSeq=$("#eventSeq").val();
+        	var keyWords=$("#keywords").val();
         	var paramsStr="";
-        	if(time.indexOf("-")!=-1){
-        		paramsStr="crawler/start?url="+urlArray+"&timeStr="+$scope.time+"&keywords="+$scope.keyWord;
+        	console.log(eventSeq);
+        	if(eventSeq==null||eventSeq==""){
+        		paramsStr="crawler/start?urls="+urlArray+"&timeStr="+time+"&keywords="+keyWords;
         	}else{
-        		paramsStr="crawler/start?url="+urlArray+"&timeSeq="+$scope.time+"&keywords=";
+        		paramsStr="crawler/start?urls="+urlArray+"&timeSeq="+eventSeq+"&keywords=";
         	}
+        	console.log(paramsStr);
 //      	var urlStr="";
 //      	if(urlArray.length>1){
 //      		for(var i=0;i<urlArray.length;i++){
@@ -91,7 +171,7 @@ var httpService = angular.module('httpService',[]).
 //      	}
         	
         	return $http({
-        		method:'get',
+        		method:'post',
         		url:paramsStr
         		
         	});
@@ -110,8 +190,14 @@ var httpService = angular.module('httpService',[]).
             loadList: function () {
                 return loadList();
             },
-            loadDetail: function () {
-                return loadDetail();
+            loadListByClass:function(type){
+            	return loadListByClass(type);
+            },
+            loadListByOrder:function(sortClass){
+            	return loadListByOrder(sortClass);
+            },
+            loadDetail: function (id) {
+                return loadDetail(id);
             },
             crawlStart:function(){
             	return crawlStart();

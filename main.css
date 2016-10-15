@@ -50,11 +50,9 @@ body{
 .nav-left li{
     border-bottom: 1px dotted rgb(50,58,69);
     font-size: 15px;
-}
-.nav-left li a{
-	padding:10px;
-	text-align: center;
-	
+    padding:10px;
+    text-align: center;
+    cursor: pointer;
 }
 
 /* 内容列表样式 */
@@ -99,6 +97,9 @@ thead th{
 .sort a{
 	float: right;
 	margin-left: 10px;
+}
+tr{
+	cursor: pointer;
 }
 .load-more{
     float: right;
