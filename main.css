@@ -187,11 +187,14 @@ tr td:nth-child(4){
 	padding-left: 200px;
 	border-radius:10px ;
 }
+
 .input-group{
-	width: 600px;
+	width: 650px;
 	margin-bottom: 10px;
 	/*border-radius: 15px;*/
+/*	display: block;*/
 }
+
 .btn{
 	margin-left: 200px;
 	width: 60px;

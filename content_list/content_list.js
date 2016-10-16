@@ -10,18 +10,20 @@ var listApp = angular.module('listApp', ['httpService']).
         //列表项数据拼接
         $scope.appendItemContent = function (data) {
             $scope.contentList = $scope.contentList || [];
-            for (var i = 0; i < data.list.length; i++) {
-                $scope.contentList.push(data.list[i]);
+            for (var i = 0; i < data.length; i++) {
+                $scope.contentList.push(data[i]);
             }
         };
         
         //侧边栏加载
         httpService.loadLeftNav().
             success(function (data) {
-             $scope.leftList = data.item;
-//	             $scope.leftList = data;
+//           $scope.leftList = data.item;
+	             $scope.leftList = data;
             });
-
+		httpService.initList().success(function(data){
+			$scope.appendItemContent(data);
+		});
         //列表页面加载
         $scope.findContent=function(){
         	

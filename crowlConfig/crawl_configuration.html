@@ -3,23 +3,24 @@
 		<h3>爬虫配置</h3>
 	<form class="bs-example bs-example-form" role="form">
 		<div class="input-group" class="url1">
-			<h5>需要爬取的URL(必填，若有多个请以空格间隔)：</h5>
+			<h5>需要爬取的URL(必填，若有多个请以分号间隔)：</h5>
 			<textarea type="text" class="form-control" id="urls">
+				{{urls}}
 			</textarea>
 		</div>
 		<div class="input-group">
-			<h5>需要爬取的事件序列（若填入该项，不需要填入关键字）：</h5>
-			<input type="text" class="form-control" id="eventSeq">
+			<h5>需要爬取的时间序列（若填入该项，不需要填入关键字）：</h5>
+			<input type="text" class="form-control" id="eventSeq" value="{{timeSeq}}">
 			
 		</div>
 		<div class="input-group">
 			<h5>需要爬取的时间（若填入该项也应填入关键字）：</h5>
-			<input type="date" class="form-control" id="time">
+			<input type="date" class="form-control" id="time" value="{{timeStr}}">
 			
 		</div>
 		<div class="input-group">
 			<h5>需要爬取的关键字：</h5>
-			<input type="text" class="form-control" id="keywords">
+			<input type="text" class="form-control" id="keywords" value="{{keywords}}">
 			
 		</div>
 		

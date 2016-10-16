@@ -67,19 +67,38 @@ var httpService = angular.module('httpService',[]).
               	params:data
             });
 		};
+		var initList=function(){
+			var data={
+               	'title':'',
+               	'content':''
+        
+              };
+        	/*
+        	 * 接口：/search
+        	 * 参数：{"title":"","content":"","typename":""}
+        	 */
+            return $http({
+                method: 'get',
+                url: '/search',
+//				url:'list.json'
+              	params:data
+            });
+		};
+		
 		var loadListByOrder=function(sortClass){
 			var data={};
 			var title=$("#title").val();
+//			title=encodeURI(title);
 			var content=$("#content").val();
 			switch(sortClass){
-				case '按时间升序':
+				case '按发布时间升序':
 				data={
                	'title':title,
                	'content':content,
                	'orderName':'publishedtime',
                	'order':'1'
               		};
-             	 break;case '按时间降序':
+             	 break;case '按发布时间降序':
 				data={
                	'title':title,
                	'content':content,
@@ -148,31 +167,35 @@ var httpService = angular.module('httpService',[]).
          * 爬虫开始接口
          */
         var crawlStart=function(){
-        	var urlArray=$("#urls").val().split(" ");
+        	var urlArray=$("#urls").val().split(";");
         	var time=$("#time").val();
         	var eventSeq=$("#eventSeq").val();
         	var keyWords=$("#keywords").val();
         	var paramsStr="";
-        	console.log(eventSeq);
         	if(eventSeq==null||eventSeq==""){
-        		paramsStr="crawler/start?urls="+urlArray+"&timeStr="+time+"&keywords="+keyWords;
+        		paramsStr={
+        			'urls':urlArray,
+        			'timeStr':time,
+        			'keywords':keyWords
+        		};
         	}else{
-        		paramsStr="crawler/start?urls="+urlArray+"&timeSeq="+eventSeq+"&keywords=";
+        		paramsStr={
+        			'urls':urlArray,
+        			'timeSeq':eventSeq,
+        			'keywords':""
+        		};
         	}
-        	console.log(paramsStr);
-//      	var urlStr="";
-//      	if(urlArray.length>1){
-//      		for(var i=0;i<urlArray.length;i++){
-//      			urlStr+=urlArray[i]+";";
-//      		}
-//      		urlStr=urlStr.substring(0,urlStr.length-1)
-//      	}else{
-//      		urlStr=$scope.urls;
-//      	}
+        	console.log(urlArray instanceof Array);
         	
         	return $http({
         		method:'post',
-        		url:paramsStr
+        		url:'crawler/start',
+        		headers:{
+        			 'Content-Type':'application/json'
+        		},
+        		responseType:'json',
+				type:"json",//返回值以json格式解析
+				params:JSON.stringify(paramsStr)
         		
         	});
         };
@@ -182,7 +205,13 @@ var httpService = angular.module('httpService',[]).
         		url:'crawler/stop'	
         	});
         };
-
+		//初始化爬虫配置
+		var initCrawl=function(){
+			return $http({
+        		method:'get',
+        		url:'/crawler'	
+        	});
+		}
         return {
             loadLeftNav: function () {
                 return loadLeftNav();
@@ -204,6 +233,12 @@ var httpService = angular.module('httpService',[]).
             },
             crawlStop:function(){
             	return crawlStop();
+            },
+            initCrawl:function(){
+            	return initCrawl();
+            },
+            initList:function(){
+            	return initList();
             }
 
         };

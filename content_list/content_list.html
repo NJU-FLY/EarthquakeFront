@@ -1,28 +1,25 @@
 <div ng-app="listApp" ng-controller="ListController">
 <ul class="nav nav-left">
-    <li ng-repeat="item in leftList"><a href="javascript:void(0)" ng-click="sortResult(event.target)">{{item}}</a></li>
+    <li ng-repeat="item in leftList track by $index"><a href="javascript:void(0)" ng-click="sortResult(event.target)">{{item}}</a></li>
 </ul>
 <!-- 列表页-->
 <div class="searchButton">
 	<form class="bs-example bs-example-form" role="form">
 		<div class="input-group">
-			
-			<input type="text" class="form-control" id="title" ng-model="title" placeholder="输入文章的标题或副标题查找">
+			<label></label><input type="text" class="form-control" id="title" placeholder="输入文章的标题或副标题查找">
 		</div>
-		<div class="input-group">
-			
-			<input type="text" class="form-control" id="content" ng-model="content" placeholder="输入文章内容查找">
-			
+		<div class="input-group">	
+			<label></label><input type="text" class="form-control" id="content" placeholder="输入文章内容查找">	
 		</div>
 		<button type="submit" class="btn btn-primary" ng-click="findContent()">查找</button>
-		<button type="reset" class="btn btn-primary clearInput">清除</button>
+		<button type="reset" class="btn clearInput">清除</button>
 		
 	</form>
 </div>
 <div class="content-list">
     <div class="item-list" id="item-list">
     <div class="sort">
-    	<a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按时间升序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按时间降序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件升序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件降序</a>
+    	<a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按发布时间升序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按发布时间降序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件升序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件降序</a>
     </div>	
     <table class="table table-bordered">
 		<tr>
@@ -38,7 +35,6 @@
 		</tr>
 		<tr ng-repeat="item in contentList" id="{{item.id}}">
 			<td><a href="#/contentdetail?id={{item.id}}" ng-click="getID(event.target)">{{item.eventid}}</a></td>
-			<td>{{item.eventseq}}</td>
 			<td>{{item.publishedtime}}</td>
 			<td>{{item.keyword}}</td>
 			<td>{{item.source}}</td>

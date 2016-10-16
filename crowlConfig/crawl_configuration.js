@@ -1,6 +1,14 @@
 var crawlApp = angular.module('crawlApp', ['httpService']).
     controller('crawlController', function ($scope, $compile, $templateCache, httpService) {
-    	
+    		httpService.initCrawl().success(function(data){
+    			$scope.urls=[];
+    			for(var i=0;i<data.urlsList.length;i++){
+    				urls.push(data.urlsList[i].url);
+    			}
+    			$scope.keywords=data.keywords;
+    			$scope.timeStr=data.timeStr;
+    			$scope.timeSeq=data.timeSeq;
+    		});
             $scope.CrawlStart=function(){   
             
             	httpService.crawlStart().success(function(status){
@@ -9,8 +17,6 @@ var crawlApp = angular.module('crawlApp', ['httpService']).
             		}else{
             			alert("运行失败，请检查输入是否正确");
             		}
-            	}).error(function(status){
-            		alert("运行失败，请检查输入是否正确");
             	});
             };
             $scope.CrawlStop=function(){      	
@@ -20,9 +26,7 @@ var crawlApp = angular.module('crawlApp', ['httpService']).
             		}else{
             			alert("爬虫未能成功停止");
             		}
-           		}).error(function(status){
-            		alert("爬虫未能成功停止");
-            	});
+           		});
             };
      
     });
