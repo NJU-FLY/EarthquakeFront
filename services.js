@@ -4,7 +4,7 @@
 
 //数据请求服务
 var httpService = angular.module('httpService',[]).
-    service('httpService', function ($http) {
+    service('httpService', function ($http,$httpParamSerializerJQLike) {
     	//获取左边栏数据
         var loadLeftNav = function () {
         	/*
@@ -20,10 +20,16 @@ var httpService = angular.module('httpService',[]).
             });
         };
 		
-        var loadList = function () {
+        var loadList = function (pageCount,type) {
         	var data={
                	'title':$("#title").val(),
-               	'content':$("#content").val()
+               	'content':$("#content").val(),
+				'pageCount':pageCount,
+				'pageNum':'10',
+				'typename':type,
+				'orderName':'publishedtime',
+               	'order':'1'
+				
               };
         	/*
         	 * 接口：/search
@@ -49,11 +55,13 @@ var httpService = angular.module('httpService',[]).
               	params:data
             });
         };
-		var loadListByClass=function(type){
+		var loadListByClass=function(pageCount,type){
 			var data={
                	'title':$("#title").val(),
                	'content':$("#content").val(),
-               	'typename':type
+               	'typename':type,
+				'pageCount':'',
+				'pageNum':'10'
               };
         	/*
         	 * 接口：/search
@@ -67,24 +75,78 @@ var httpService = angular.module('httpService',[]).
               	params:data
             });
 		};
-		var loadListByOrder=function(sortClass){
+		var loadListByPage=function(pageCount,type){
+			var data={
+               	'title':$("#title").val(),
+               	'content':$("#content").val(),
+				'pageCount':pageCount,
+				'pageNum':'10',
+				'typename':type,
+				'orderName':'publishedtime',
+               	'order':'1'
+              };
+        	/*
+        	 * 接口：/search
+        	 * 参数：{"title":"","content":"","typename":""}
+        	 */
+        	console.log(data);
+            return $http({
+                method: 'get',
+                url: '/search',
+//				url:'list.json'
+              	params:data
+            });
+		};
+		var initList=function(){
+			var data={
+               	'title':'',
+               	'content':'',
+				'pageCount':'',
+				'pageNum':'10',
+				'typename':'',
+				'orderName':'publishedtime',
+               	'order':'1'
+        
+              };
+        	/*
+        	 * 接口：/search
+        	 * 参数：{"title":"","content":"","typename":""}
+        	 */
+            return $http({
+                method: 'get',
+                url: '/search',
+//				url:'list.json'
+              	params:data
+            });
+		};
+		
+		var loadListByOrder=function(pageCount,type,sortClass){
 			var data={};
 			var title=$("#title").val();
+//			title=encodeURI(title);
 			var content=$("#content").val();
 			switch(sortClass){
-				case '按时间升序':
+				case '按发布时间升序':
 				data={
                	'title':title,
                	'content':content,
                	'orderName':'publishedtime',
-               	'order':'1'
+               	'order':'1',
+				'pageCount':pageCount,
+				'pageNum':'10',
+				'typename':type
+
               		};
-             	 break;case '按时间降序':
+             	 break;
+				 case '按发布时间降序':
 				data={
                	'title':title,
                	'content':content,
                	'orderName':'publishedtime',
-               	'order':'2'
+               	'order':'2',
+				'pageCount':pageCount,
+				'pageNum':'10',
+				'typename':type
               		};
              	 break;
              	 case '按事件升序':
@@ -92,7 +154,10 @@ var httpService = angular.module('httpService',[]).
                	'title':title,
                	'content':content,
                	'orderName':'eventid',
-               	'order':'1'
+               	'order':'1',
+				'pageCount':pageCount,
+				'pageNum':'10',
+				'typename':type
               		};
              	 break;
              	 case '按事件降序':
@@ -100,7 +165,10 @@ var httpService = angular.module('httpService',[]).
                	'title':title,
                	'content':content,
                	'orderName':'eventid',
-               	'order':'2'
+               	'order':'2',
+				'pageCount':pageCount,
+				'pageNum':'10',
+				'typename':type
               		};
              	 break;
              	 
@@ -148,31 +216,37 @@ var httpService = angular.module('httpService',[]).
          * 爬虫开始接口
          */
         var crawlStart=function(){
-        	var urlArray=$("#urls").val().split(" ");
+        	var urlArray=$("#urls").val().split(";\n");
         	var time=$("#time").val();
         	var eventSeq=$("#eventSeq").val();
         	var keyWords=$("#keywords").val();
-        	var paramsStr="";
-        	console.log(eventSeq);
+        	var paramsStr={};
         	if(eventSeq==null||eventSeq==""){
-        		paramsStr="crawler/start?urls="+urlArray+"&timeStr="+time+"&keywords="+keyWords;
+        		paramsStr={
+        			'urls':urlArray,
+        			'timeStr':time,
+					'timeSeq':"",
+        			'keywords':keyWords
+        		};
         	}else{
-        		paramsStr="crawler/start?urls="+urlArray+"&timeSeq="+eventSeq+"&keywords=";
+        		paramsStr={
+        			'urls':urlArray,
+        			'timeSeq':eventSeq,
+					'timeStr':"",
+        			'keywords':""
+        		};
         	}
-        	console.log(paramsStr);
-//      	var urlStr="";
-//      	if(urlArray.length>1){
-//      		for(var i=0;i<urlArray.length;i++){
-//      			urlStr+=urlArray[i]+";";
-//      		}
-//      		urlStr=urlStr.substring(0,urlStr.length-1)
-//      	}else{
-//      		urlStr=$scope.urls;
-//      	}
+        	console.log(urlArray instanceof Array);
+			
+			console.log(paramsStr);
         	
         	return $http({
         		method:'post',
-        		url:paramsStr
+        		url:'crawler/start',
+				headers:{
+        			 'Content-Type':'application/json'
+        		},        	
+				data:JSON.stringify(paramsStr)
         		
         	});
         };
@@ -182,20 +256,37 @@ var httpService = angular.module('httpService',[]).
         		url:'crawler/stop'	
         	});
         };
-
+		//初始化爬虫配置
+		var initCrawl=function(){
+			return $http({
+        		method:'get',
+        		url:'/crawler'	
+        	});
+		}
+		//拉取爬虫数据
+		var crawlProcess=function(){
+			return $http({
+				method:'get',
+				url:'crawler/process'
+	//			url:'process.json'
+			});
+		}
         return {
             loadLeftNav: function () {
                 return loadLeftNav();
             },
-            loadList: function () {
-                return loadList();
+            loadList: function (pageCount,type) {
+                return loadList(pageCount,type);
             },
-            loadListByClass:function(type){
-            	return loadListByClass(type);
+            loadListByClass:function(pageCount,type){
+            	return loadListByClass(pageCount,type);
             },
-            loadListByOrder:function(sortClass){
-            	return loadListByOrder(sortClass);
+            loadListByOrder:function(pageCount,type,sortClass){
+            	return loadListByOrder(pageCount,type,sortClass);
             },
+			loadListByPage:function(pageCount,type){
+				return loadListByPage(pageCount,type);
+			},
             loadDetail: function (id) {
                 return loadDetail(id);
             },
@@ -204,6 +295,15 @@ var httpService = angular.module('httpService',[]).
             },
             crawlStop:function(){
             	return crawlStop();
+            },
+            initCrawl:function(){
+            	return initCrawl();
+            },
+			crawlProcess:function(){
+            	return crawlProcess();
+            },
+            initList:function(){
+            	return initList();
             }
 
         };

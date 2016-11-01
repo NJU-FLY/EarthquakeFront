@@ -1,33 +1,41 @@
-<div ng-app="listApp" ng-controller="ListController">
+<div ng-app="listApp">
+<div class="left">
 <ul class="nav nav-left">
-    <li ng-repeat="item in leftList"><a href="javascript:void(0)" ng-click="sortResult(event.target)">{{item}}</a></li>
+
+	<li ng-repeat="item in leftList track by $index"><a data-id="{{item.id}}" href="javascript:void(0)" ng-click="sortResult(event.target)">{{item.column}}</a></li>
+
+
 </ul>
+</div>
 <!-- 列表页-->
+<div class="middle">
 <div class="searchButton">
 	<form class="bs-example bs-example-form" role="form">
-		<div class="input-group">
-			
-			<input type="text" class="form-control" id="title" ng-model="title" placeholder="输入文章的标题或副标题查找">
+		<div class="input-group row">
+			<span class="input-group-addon">标题：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" class="form-control" id="title" placeholder="输入文章的标题或副标题查找">
 		</div>
-		<div class="input-group">
-			
-			<input type="text" class="form-control" id="content" ng-model="content" placeholder="输入文章内容查找">
-			
+		<div class="input-group row">	
+			<span class="input-group-addon">正文：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" class="form-control" id="content" placeholder="输入文章内容查找">	
+		</div>
+		<div class="input-group row">
+			<span class="input-group-addon">关键词：&nbsp;&nbsp;&nbsp;</span><input type="text" class="form-control" id="title" placeholder="输入文章的关键词查找">
+		</div>
+		<div class="input-group row">	
+			<span class="input-group-addon">地震事件：</span><input type="text" class="form-control" id="content" placeholder="输入事件序号查找">	
 		</div>
 		<button type="submit" class="btn btn-primary" ng-click="findContent()">查找</button>
-		<button type="reset" class="btn btn-primary clearInput">清除</button>
+		<button type="reset" class="btn clearInput">清除</button>
 		
 	</form>
 </div>
 <div class="content-list">
     <div class="item-list" id="item-list">
     <div class="sort">
-    	<a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按时间升序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按时间降序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件升序</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件降序</a>
+    	<a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按发布时间↑</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按发布时间↓</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件↑</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件↓</a>
     </div>	
-    <table class="table table-bordered">
+    <table class="tablePart">
 		<tr>
 			<td>地震事件</td>
-			<td>序号</td>
 			<td>发布时间</td>
 			<td>关键词</td>
 			<td>信息来源</td>
@@ -38,27 +46,22 @@
 		</tr>
 		<tr ng-repeat="item in contentList" id="{{item.id}}">
 			<td><a href="#/contentdetail?id={{item.id}}" ng-click="getID(event.target)">{{item.eventid}}</a></td>
-			<td>{{item.eventseq}}</td>
 			<td>{{item.publishedtime}}</td>
-			<td>{{item.keyword}}</td>
+			<td>{{item.typename}}</td>
 			<td>{{item.source}}</td>
 			<td>{{item.title}}</td>
-			<td class="item-abstract">{{item.summary}}</td>
+			<td>{{item.summary}}</td>
 			<td>{{item.url}}</td>
 			<td>{{item.crawledtime}}</td>
 		</tr>
 </table>
-        <!--<div class="content-item" ng-repeat="item in contentList" id="{{item.id}}">
-            <div class="parting-line"></div>
-            <div class="item-title"><a href="#/contentDetail" ng-model="detailTitle">{{item.title}}</a></div>
-            <div class="item-info">{{item.info}}</div>
-            <div class="item-abstract">{{item.abstract}}</div>
-        </div>-->
-    </div>
-    <!--<div class="load-more">
-        <div class="load-more-content" ng-click="loadMore($event)">
-            加载更多
+       
+		<div style="text-align:center;">
+        	<ul class="pagination pagination-sm" ng-repeat="item in pageArray">
+				<li><a href="javascript:void(0)" ng-click="sortByPage(event.target)">{{item}}</a></li>
+			</ul>
         </div>
-    </div>-->
+  
+</div>
 </div>
 </div>
