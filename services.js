@@ -28,7 +28,13 @@ var httpService = angular.module('httpService',[]).
 				'pageNum':'10',
 				'typename':type,
 				'orderName':'publishedtime',
-               	'order':'1'
+               	'order':'1',
+				'summary':$("#summary").val(),
+				'eventId':$("#eventid").val(),
+				'crawledStartTime':$("#crawledStartTime").val(),
+				'crawledEndTime':$("#crawledEndTime").val(),
+				'publishedStartTime':$("#publishedStartTime").val(),
+				'publishedEndTime':$("#publishedEndTime").val()
 				
               };
         	/*
@@ -61,7 +67,13 @@ var httpService = angular.module('httpService',[]).
                	'content':$("#content").val(),
                	'typename':type,
 				'pageCount':'',
-				'pageNum':'10'
+				'pageNum':'10',
+				'summary':$("#summary").val(),
+				'eventId':$("#eventid").val(),
+				'crawledStartTime':$("#crawledStartTime").val(),
+				'crawledEndTime':$("#crawledEndTime").val(),
+				'publishedStartTime':$("#publishedStartTime").val(),
+				'publishedEndTime':$("#publishedEndTime").val()
               };
         	/*
         	 * 接口：/search
@@ -83,7 +95,13 @@ var httpService = angular.module('httpService',[]).
 				'pageNum':'10',
 				'typename':type,
 				'orderName':'publishedtime',
-               	'order':'1'
+               	'order':'1',
+				'summary':$("#summary").val(),
+				'eventId':$("#eventid").val(),
+				'crawledStartTime':$("#crawledStartTime").val(),
+				'crawledEndTime':$("#crawledEndTime").val(),
+				'publishedStartTime':$("#publishedStartTime").val(),
+				'publishedEndTime':$("#publishedEndTime").val()
               };
         	/*
         	 * 接口：/search
@@ -105,7 +123,13 @@ var httpService = angular.module('httpService',[]).
 				'pageNum':'10',
 				'typename':'',
 				'orderName':'publishedtime',
-               	'order':'1'
+               	'order':'1',
+				'summary':'',
+				'eventId':'',
+				'crawledStartTime':'',
+				'crawledEndTime':'',
+				'publishedStartTime':'',
+				'publishedEndTime':''
         
               };
         	/*
@@ -126,7 +150,7 @@ var httpService = angular.module('httpService',[]).
 //			title=encodeURI(title);
 			var content=$("#content").val();
 			switch(sortClass){
-				case '按发布时间升序':
+				case '按发布时间↑':
 				data={
                	'title':title,
                	'content':content,
@@ -134,11 +158,17 @@ var httpService = angular.module('httpService',[]).
                	'order':'1',
 				'pageCount':pageCount,
 				'pageNum':'10',
-				'typename':type
+				'typename':type,
+				'summary':$("#summary").val(),
+				'eventId':$("#eventid").val(),
+				'crawledStartTime':$("#crawledStartTime").val(),
+				'crawledEndTime':$("#crawledEndTime").val(),
+				'publishedStartTime':$("#publishedStartTime").val(),
+				'publishedEndTime':$("#publishedEndTime").val()
 
               		};
              	 break;
-				 case '按发布时间降序':
+				 case '按发布时间↓':
 				data={
                	'title':title,
                	'content':content,
@@ -146,10 +176,51 @@ var httpService = angular.module('httpService',[]).
                	'order':'2',
 				'pageCount':pageCount,
 				'pageNum':'10',
-				'typename':type
+				'typename':type,
+				'summary':$("#summary").val(),
+				'eventId':$("#eventid").val(),
+				'crawledStartTime':$("#crawledStartTime").val(),
+				'crawledEndTime':$("#crawledEndTime").val(),
+				'publishedStartTime':$("#publishedStartTime").val(),
+				'publishedEndTime':$("#publishedEndTime").val()
               		};
              	 break;
-             	 case '按事件升序':
+				 case '按爬取时间↑':
+				data={
+               	'title':title,
+               	'content':content,
+               	'orderName':'crawledtime',
+               	'order':'1',
+				'pageCount':pageCount,
+				'pageNum':'10',
+				'typename':type,
+				'summary':$("#summary").val(),
+				'eventId':$("#eventid").val(),
+				'crawledStartTime':$("#crawledStartTime").val(),
+				'crawledEndTime':$("#crawledEndTime").val(),
+				'publishedStartTime':$("#publishedStartTime").val(),
+				'publishedEndTime':$("#publishedEndTime").val()
+
+              		};
+             	 break;
+				 case '按爬取时间↓':
+				data={
+               	'title':title,
+               	'content':content,
+               	'orderName':'crawledtime',
+               	'order':'2',
+				'pageCount':pageCount,
+				'pageNum':'10',
+				'typename':type,
+				'summary':$("#summary").val(),
+				'eventId':$("#eventid").val(),
+				'crawledStartTime':$("#crawledStartTime").val(),
+				'crawledEndTime':$("#crawledEndTime").val(),
+				'publishedStartTime':$("#publishedStartTime").val(),
+				'publishedEndTime':$("#publishedEndTime").val()
+              		};
+             	 break;
+             	 case '按事件↑':
 				data={
                	'title':title,
                	'content':content,
@@ -157,10 +228,16 @@ var httpService = angular.module('httpService',[]).
                	'order':'1',
 				'pageCount':pageCount,
 				'pageNum':'10',
-				'typename':type
+				'typename':type,
+				'summary':$("#summary").val(),
+				'eventId':$("#eventid").val(),
+				'crawledStartTime':$("#crawledStartTime").val(),
+				'crawledEndTime':$("#crawledEndTime").val(),
+				'publishedStartTime':$("#publishedStartTime").val(),
+				'publishedEndTime':$("#publishedEndTime").val()
               		};
              	 break;
-             	 case '按事件降序':
+             	 case '按事件↓':
 				data={
                	'title':title,
                	'content':content,
@@ -168,7 +245,13 @@ var httpService = angular.module('httpService',[]).
                	'order':'2',
 				'pageCount':pageCount,
 				'pageNum':'10',
-				'typename':type
+				'typename':type,
+				'summary':$("#summary").val(),
+				'eventId':$("#eventid").val(),
+				'crawledStartTime':$("#crawledStartTime").val(),
+				'crawledEndTime':$("#crawledEndTime").val(),
+				'publishedStartTime':$("#publishedStartTime").val(),
+				'publishedEndTime':$("#publishedEndTime").val()
               		};
              	 break;
              	 

@@ -61,8 +61,6 @@ var listApp = angular.module('listApp', ['httpService']).
         	var typename=$(event.target).text();
 			$scope.sort=typename;
         	httpService.loadListByClass($scope.page,$scope.sort).success(function(data){
-				console.log(data.pageTotal);
-				console.log(data.list.length);
         		$scope.appendItemContent(data);
 				$scope.convertToArray(data.pageTotal);
 				

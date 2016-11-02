@@ -120,7 +120,6 @@ table tr:first-child td{
 /* 内容详情样式 */
 .content-detail{
     margin-top: 60px;
-    margin-left: 100px;
     padding: 20px 20px 20px 40px;
 }
 
@@ -208,6 +207,14 @@ table tr:first-child td{
 .craw-config{
 	width: 900px;
 	margin: 100px auto;
+	margin-left:-20px;
+}
+@media only screen and (min-width: 1441px){
+	.craw-config{
+	width: 900px;
+	margin: 100px auto;
+	margin-left:20px;
+}
 }
 .craw-config .input-group{
 	width: 900px;
@@ -249,7 +256,7 @@ table tr:first-child td{
 }
 //圣杯布局
 *{margin: 0;padding: 0;}
-    body{min-width: 1440px;}
+    body{min-width: 1280px;}
     .header{ 
         border: 1px solid #333;
         text-align: center;
@@ -280,6 +287,6 @@ table tr:first-child td{
     }
 	.container{
 		padding-left:300px;
-		padding-right:200px;
+		padding-right:100px;
 		width:100%;
 	}

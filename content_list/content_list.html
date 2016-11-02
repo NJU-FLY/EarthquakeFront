@@ -12,17 +12,24 @@
 <div class="searchButton">
 	<form class="bs-example bs-example-form" role="form">
 		<div class="input-group row">
-			<span class="input-group-addon">标题：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" class="form-control" id="title" placeholder="输入文章的标题或副标题查找">
+			<span class="input-group-addon">标题：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" class="form-control" id="title" placeholder="输入文章的标题查找">
 		</div>
 		<div class="input-group row">	
 			<span class="input-group-addon">正文：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" class="form-control" id="content" placeholder="输入文章内容查找">	
 		</div>
 		<div class="input-group row">
-			<span class="input-group-addon">关键词：&nbsp;&nbsp;&nbsp;</span><input type="text" class="form-control" id="title" placeholder="输入文章的关键词查找">
+			<span class="input-group-addon">摘要：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" class="form-control" id="summary" placeholder="输入文章的摘要查找">
 		</div>
 		<div class="input-group row">	
-			<span class="input-group-addon">地震事件：</span><input type="text" class="form-control" id="content" placeholder="输入事件序号查找">	
+			<span class="input-group-addon">爬取时间：</span><input type="datetime-local" class="form-control" id="crawledStartTime" style="width:47%;border-radius:5px;"><span style="margin-left:10px;margin-top:5px;display:inline-block;">至</span><input type="datetime-local" class="form-control" id="crawledEndTime" style="width:47%;float:right;">	
 		</div>
+		<div class="input-group row">	
+			<span class="input-group-addon">发布时间：</span><input type="date" class="form-control" id="publishedStartTime" style="width:47%;border-radius:5px;"><span style="margin-left:10px;margin-top:5px;display:inline-block;">至</span><input type="date" class="form-control" id="publishedEndTime" style="width:47%;float:right;">	
+		</div>
+		<div class="input-group row">	
+			<span class="input-group-addon">地震事件：</span><input type="text" class="form-control" id="eventid" placeholder="输入事件序号查找">	
+		</div>
+		
 		<button type="submit" class="btn btn-primary" ng-click="findContent()">查找</button>
 		<button type="reset" class="btn clearInput">清除</button>
 		
@@ -31,7 +38,7 @@
 <div class="content-list">
     <div class="item-list" id="item-list">
     <div class="sort">
-    	<a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按发布时间↑</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按发布时间↓</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件↑</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件↓</a>
+    	<a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按爬取时间↑</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按爬取时间↓</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按发布时间↑</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按发布时间↓</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件↑</a><a href="javascript:void(0)" ng-click="sortByOrder(event.target)">按事件↓</a>
     </div>	
     <table class="tablePart">
 		<tr>
