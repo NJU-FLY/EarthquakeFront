@@ -16,6 +16,7 @@ var listApp = angular.module('listApp', ['httpService']).
                 $scope.contentList.push(data.list[i]);
             }
         };
+        //根据得到的数据条数确定页码
         $scope.convertToArray=function(data){
 			var items=parseInt(data/10)+1;
 			$scope.pageArray=[];
@@ -36,7 +37,7 @@ var listApp = angular.module('listApp', ['httpService']).
 			$scope.convertToArray(data.pageTotal);
 			
 		});
-        //列表页面加载
+        //列表页面加载，传入页码及类别
         $scope.findContent=function(){
         	
         	$scope.clearResult();
@@ -52,7 +53,7 @@ var listApp = angular.module('listApp', ['httpService']).
         $scope.clearResult=function(){
         	$scope.contentList=[];
         }
-        //分类选取结果
+        //分类选取结果，传入页码及类别
         $scope.sortResult=function(){
         	$scope.clearResult();
 			var id = $(event.target).data("id");

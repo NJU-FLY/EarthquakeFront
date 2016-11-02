@@ -87,15 +87,44 @@ var httpService = angular.module('httpService',[]).
               	params:data
             });
 		};
-		var loadListByPage=function(pageCount,type){
+		var loadListByPage=function(pageCount,type,sortClass){
+			var orderName="";
+			var order="";
+			switch(sortClass){
+				case '按发布时间↑':
+				orderName="publishedtime";
+				order="1";
+				break;
+				case '按发布时间↓':
+				orderName="publishedtime";
+				order="2";
+				break;
+				case '按爬取时间↑':
+				orderName="crawledtime";
+				order="1";
+				break;
+				case '按爬取时间↓':
+				orderName="crawledtime";
+				order="2";
+				break;
+				case '按事件↑':
+				orderName="eventid";
+				order="1";
+				break;
+				case '按事件↓':
+				orderName="eventid";
+				order="2";
+				break;
+				
+			}
 			var data={
                	'title':$("#title").val(),
                	'content':$("#content").val(),
 				'pageCount':pageCount,
 				'pageNum':'10',
 				'typename':type,
-				'orderName':'publishedtime',
-               	'order':'1',
+				'orderName':orderName,
+               	'order':order,
 				'summary':$("#summary").val(),
 				'eventId':$("#eventid").val(),
 				'crawledStartTime':$("#crawledStartTime").val(),
@@ -367,8 +396,8 @@ var httpService = angular.module('httpService',[]).
             loadListByOrder:function(pageCount,type,sortClass){
             	return loadListByOrder(pageCount,type,sortClass);
             },
-			loadListByPage:function(pageCount,type){
-				return loadListByPage(pageCount,type);
+			loadListByPage:function(pageCount,type,sortClass){
+				return loadListByPage(pageCount,type,sortClass);
 			},
             loadDetail: function (id) {
                 return loadDetail(id);
