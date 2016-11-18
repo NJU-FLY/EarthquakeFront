@@ -18,6 +18,7 @@
 </script>-->
 	
 	<template>
+		<div>
 		<ul class="nav nav-left">
     <li><a href="#">法律法规</a></li>
      <li><a href="#">行业动态</a></li>
@@ -25,6 +26,7 @@
        <li><a href="#">科技检测</a></li>
         <li><a href="#">热点报道</a></li>
 		</ul>
+		</div>
 	</template>
 /* 侧边栏样式 */
 <style>
