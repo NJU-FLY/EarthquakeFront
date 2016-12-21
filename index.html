@@ -5,29 +5,25 @@
     <title>智能预测系统</title>
     <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="bootstrap.min.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="app.js"></script>
     <script src="content_list/content_list.js"></script>
     <script src="content_detail/content_detail.js"></script>
     <script src="crowlConfig/crawl_configuration.js"></script>
+	<script src="homePage/homePage.js"></script>
     <script src="services.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+	 <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" href="bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="main.css" type="text/css"/>
+    
+   
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" href="main.css" type="text/css"/>
 </head>
 <body>
-<div class="navbar navbar-fixed-top nav-top" role="navigation">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                data-target=".navbar-collapse">
-            <span class="sr-only">切换导航</span> <span class="icon-bar"></span> <span
-                class="icon-bar"></span> <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand brand-title">智能预测系统</a>
-        <a class="a1" href="#/search">结果检索页</a>
-        <a class="a2" href="#/crawler">爬虫配置页</a>
-    </div>
-</div>
-<div class="main-content" ng-view></div>
+
+<div class="main-content container" ng-view></div>
+
 </body>
 </html>

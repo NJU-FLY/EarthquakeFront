@@ -19,7 +19,11 @@ mainApp.config(['$routeProvider', function ($routeProvider) {
             	templateUrl:'crowlConfig/crawl_configuration.html',
             	controller:'crawlController'
             }).
-            otherwise({redirectTo: '/crawler'});
+            when('/home',{
+            	templateUrl:'homePage/homePage.html',
+            	controller:'crawlController'
+            }).
+            otherwise({redirectTo: '/home'});
     }]);
 
 
