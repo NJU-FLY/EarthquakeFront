@@ -1,0 +1,809 @@
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03B6DEB8>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03B78DF0>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03B73698>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03B7C850>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03B8E968>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03B9BBC0>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03BA8C88>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03BC00F8>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03BA8CB0>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03B7C878>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03B4B508>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03C2B170>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03C38300>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03C464E0>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03C53670>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03C5F850>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03C6C968>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03C7AA80>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03CD7030>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03C86328>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03CE9058>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03CF7080>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03CFC1E8>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03D083C8>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03D19558>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03D24698>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03D30850>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03D3DA08>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:29+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.start_listening of <scrapy.telnet.TelnetConsole instance at 0x03D166E8>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 77, in start
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 47, in start_listening
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\reactor.py", line 14, in listen_tcp
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\posixbase.py", line 478, in listenTCP
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\tcp.py", line 983, in startListening
+	    
+	twisted.internet.error.CannotListenError: Couldn't listen on 127.0.0.1:6073: [Errno 10048] 通常每个套接字地址(协议/网络地址/端口).
+	
+2016-11-01 15:47:40+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.stop_listening of <scrapy.telnet.TelnetConsole instance at 0x03BA8C88>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 300, in _finish_stopping_engine
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 53, in stop_listening
+	    
+	exceptions.AttributeError: TelnetConsole instance has no attribute 'port'
+	
+2016-11-01 15:47:46+0800 [autospider] ERROR: Error downloading <GET http://www.eqyn.com>: None: address 'www.eqyn.com' not found: [Errno 11001] getaddrinfo failed.
+2016-11-01 15:47:46+0800 [autospider] ERROR: Error downloading <GET http://www.ln.earthquake.cn/>: None: address 'www.ln.earthquake.cn' not found: [Errno 11001] getaddrinfo failed.
+2016-11-01 15:47:46+0800 [autospider] ERROR: Error downloading <GET http://www.sx.earthquake.cn>: None: address 'www.sx.earthquake.cn' not found: [Errno 11001] getaddrinfo failed.
+2016-11-01 15:47:46+0800 [autospider] ERROR: Error downloading <GET http://www.eqjl.com.cn/>: None: address 'www.eqjl.com.cn' not found: [Errno 11001] getaddrinfo failed.
+2016-11-01 15:47:46+0800 [autospider] ERROR: Error downloading <GET http://jdz.cq.gov.cn/>: None: address 'jdz.cq.gov.cn' not found: [Errno 11001] getaddrinfo failed.
+2016-11-01 15:47:46+0800 [autospider] ERROR: Error downloading <GET http://www.nx.earthquake.cn>: None: address 'www.nx.earthquake.cn' not found: [Errno 11001] getaddrinfo failed.
+2016-11-01 15:47:46+0800 [autospider] ERROR: Error downloading <GET http://www.fjea.gov.cn/>: None: address 'www.fjea.gov.cn' not found: [Errno 11001] getaddrinfo failed.
+2016-11-01 15:47:51+0800 [autospider] ERROR: Error downloading <GET http://cn.reuters.com/>: None: address 'cn.reuters.com' not found: [Errno 11004] getaddrinfo failed.
+2016-11-01 15:47:52+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.stop_listening of <scrapy.telnet.TelnetConsole instance at 0x03B73698>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 300, in _finish_stopping_engine
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 53, in stop_listening
+	    
+	exceptions.AttributeError: TelnetConsole instance has no attribute 'port'
+	
+2016-11-01 15:47:52+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.stop_listening of <scrapy.telnet.TelnetConsole instance at 0x03BC00F8>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 300, in _finish_stopping_engine
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 53, in stop_listening
+	    
+	exceptions.AttributeError: TelnetConsole instance has no attribute 'port'
+	
+2016-11-01 15:48:04+0800 [scrapy] ERROR: Error caught on signal handler: <bound method ?.stop_listening of <scrapy.telnet.TelnetConsole instance at 0x03D083C8>>
+	Traceback (most recent call last):
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 1185, in _inlineCallbacks
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\core\engine.py", line 300, in _finish_stopping_engine
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\signalmanager.py", line 23, in send_catch_log_deferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\utils\signal.py", line 53, in send_catch_log_deferred
+	    
+	--- <exception caught here> ---
+	  File "Z:\scrapy_conda\lib\site-packages\twisted\internet\defer.py", line 149, in maybeDeferred
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\xlib\pydispatch\robustapply.py", line 54, in robustApply
+	    
+	  File "Z:\scrapy_conda\lib\site-packages\scrapy\telnet.py", line 53, in stop_listening
+	    
+	exceptions.AttributeError: TelnetConsole instance has no attribute 'port'
+	

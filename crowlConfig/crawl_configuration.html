@@ -1,24 +1,41 @@
 <!-- 爬虫配置页面-->
-	<div class="craw-config">
+<div ng-include="'header.htm'"></div>
+	<div class="craw-config" ng-App="crawlApp">
 		<h3>爬虫配置</h3>
 	<form class="bs-example bs-example-form" role="form">
 		<div class="input-group" class="url1">
-			<h5>需要爬取的URL(必填，若有多个请以空格间隔)：</h5>
-			<textarea type="text" class="form-control" ng-model="urls" required>
-			</textarea>
+			<h4>1.需要爬取的URL(必填，若有多个请以分号间隔，网址前需要带上http://前缀)：</h4>
+			<textarea type="text" class="form-control" id="urls">{{urls}}</textarea>
 		</div>
-		<div class="input-group">
-			<h5>需要爬取的时间(必填，按照yyyy-mm-dd或时间序列的格式)：</h5>
-			<input type="datetime" class="form-control" ng-model="time" required>
-			
+		<h4>2.按照事件或时间关键字查询<button type="button" class="btn btn-link" style="margin-left: 10px;" ng-click="changeReq();">切换查询条件</button></h4>
+		<div class="eventReq">
+			<div class="input-group">
+				<h5>需要爬取的地震事件（一组数字序列）：</h5>
+				<input type="text" class="form-control" id="eventSeq" value="{{timeSeq}}">
+				
+			</div>
 		</div>
-		<div class="input-group">
-			<h5>需要爬取的关键字：</h5>
-			<input type="text" class="form-control" ng-model="keyWord">
-			
+		<div class="keywordReq" style="display: none;">
+			<div class="input-group">
+				<h5>需要爬取的时间（必填）：</h5>
+				<input type="date" class="form-control" id="time" value="{{timeStr}}" required="required">
+				
+			</div>
+			<div class="input-group">
+				<h5>需要爬取的关键字（必填）：</h5>
+				<input type="text" class="form-control" id="keywords" value="{{keywords}}" required="required">
+				
+			</div>
+		
 		</div>
+		
 		
 		<button type="submit" class="btn btn-primary" ng-click="CrawlStart($event)">运行爬虫</button>
 		<button type="reset" class="btn btn-primary clearInput" ng-click="CrawlStop($event)">停止爬虫</button>
 	</form>
+	<h5 class="process-title">爬取过程：</h5>
+	<div class="process">
+	
+	<p ng-repeat="process in processes"><span>时间：{{process.time}}</span><span>状态：{{process.status}}</span><span>网址：{{process.url}}</span></p>
+	</div>
 </div>

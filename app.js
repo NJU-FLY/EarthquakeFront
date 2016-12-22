@@ -3,7 +3,7 @@
  */
 
 //主模块
-var mainApp = angular.module('mainApp', ['ngRoute', 'listApp', 'detailApp','httpService']);
+var mainApp = angular.module('mainApp', ['ngRoute', 'listApp', 'detailApp','crawlApp','httpService']);
 
 mainApp.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
@@ -19,7 +19,11 @@ mainApp.config(['$routeProvider', function ($routeProvider) {
             	templateUrl:'crowlConfig/crawl_configuration.html',
             	controller:'crawlController'
             }).
-            otherwise({redirectTo: '/crawler'});
+            when('/home',{
+            	templateUrl:'homePage/homePage.html',
+            	controller:'crawlController'
+            }).
+            otherwise({redirectTo: '/home'});
     }]);
 
 

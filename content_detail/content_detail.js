@@ -8,12 +8,17 @@ var detailApp = angular.module('detailApp', ['httpService']).
         //侧边栏加载
         httpService.loadLeftNav().
             success(function (data) {
-                $scope.leftList = data.item;
+  //              $scope.leftList = data.item;
+             $scope.leftList = data;
             });
         //详情加载
- 
-        httpService.loadDetail().
+        var href=window.location.href;
+        var id=href.slice(href.indexOf("=")+1);
+        console.log(id);
+        httpService.loadDetail(id).
             success(function (data) {
-                $scope.detail = data.detail;
+ //               $scope.detail = data.detail;
+              $scope.detail = data;
             });
+        
     }]);
