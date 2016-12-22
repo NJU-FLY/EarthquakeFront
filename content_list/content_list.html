@@ -40,7 +40,7 @@
 <p class="toggleTable"><button ng-click="timeLineShow=true;listShow=false;">时间线展示</button><button ng-click="timeLineShow=false;listShow=true;">列表展示</button></p>
 <div class="timeLineLists" ng-show="timeLineShow">
 <ul class="cbp_tmtimeline" >
-					<li ng-repeat="item in contentList">
+					<li ng-repeat="item in contentList | orderBy:'-publishedtime'">
 						<time class="cbp_tmtime"><span style="font-size:16px;text-align:left;">{{item.publishedtime}}</span></time>
 						<div class="cbp_tmicon cbp_tmicon-earth"></div>
 						<div class="cbp_tmlabel">
