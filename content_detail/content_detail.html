@@ -1,18 +1,25 @@
-<ul class="nav nav-left">
-    <li ng-repeat="item in leftList track by $index"><a>{{item}}</a></li>
-</ul>
+
+<div ng-include="'header.htm'"></div>
+<div class="left">
+	<ul class="nav nav-left">
+		<li ng-repeat="item in leftList track by $index"><a>{{item.column}}</a></li>
+	</ul>
+</div>
+
 <!-- 详情页-->
-<div class="content-detail">
-    <!--<ul class="detail-nav breadcrumb">-->
-        <!--<li>新闻</li>-->
-        <!--<li>危险驾驶案</li>-->
-    <!--</ul>-->
-    <div class="detail-header" >
-        <div class="detail-title">{{detail.title}}</div>
-        <div class="detail-info">{{detail.summary}}</div>
-    </div>
-    <div class="detail-detail-header">
-        <span>消息正文</span>
-    </div>
-    <div class="detail-detail">{{detail.content}}</div>
+<div class="middle">
+	<div class="content-detail">
+		<!--<ul class="detail-nav breadcrumb">-->
+			<!--<li>新闻</li>-->
+			<!--<li>危险驾驶案</li>-->
+		<!--</ul>-->
+		<div class="detail-header" >
+			<div class="detail-title">{{detail.title}}</div>
+			<div class="detail-info">{{detail.summary}}</div>
+		</div>
+		<div class="detail-detail-header">
+			<span>消息正文</span>
+		</div>
+		<div class="detail-detail">{{detail.content}}</div>
+	</div>
 </div>

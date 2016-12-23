@@ -1,7 +1,8 @@
 <template>
+	<div>
 	<!-- 列表页-->
-	<sidebar></sidebar>
-<div class="searchButton">
+	<!--<sidebar></sidebar>-->
+	<div class="searchButton">
 	<form class="bs-example bs-example-form" role="form">
 		<div class="input-group">
 			
@@ -21,19 +22,16 @@
     <div class="item-list" id="item-list">
         <div class="content-item">
             <div class="parting-line"></div>
-            <div class="item-title"><a href="/contentDetail">sss</a></div>
+            <div class="item-title"><router-link to="/contentDetail">sss</router-link></div>
             <div class="item-info">lll</div>
             <div class="item-abstract">llll </div>
         </div>
     </div>
-    <!--<div class="load-more">
-        <div class="load-more-content" ng-click="loadMore($event)">
-            加载更多
-        </div>
-    </div>-->
+   
+</div>
 </div>
 </template>
-<script>
+<!--<script>
 import Sidebar from './components/Sidebar'
 
 export default {
@@ -41,7 +39,7 @@ components: {
     'sidebar':Sidebar
 }
 }
-</script>
+</script>-->
 <style>
 	/* 内容列表样式 */
 .content-list {
